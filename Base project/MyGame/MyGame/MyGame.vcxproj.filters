@@ -15,6 +15,9 @@
     </ClCompile>
     <ClCompile Include="MyGame.cpp" />
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Laser.cpp" />
+    <ClCompile Include="Meteor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\AnimatedSprite.h">
@@ -33,6 +36,9 @@
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="ship.h" />
+    <ClInclude Include="Laser.h" />
+    <ClInclude Include="Meteor.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -46,5 +52,10 @@
     <None Include="Resources\README.md">
       <Filter>Resources</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\..\OneDrive\Game engine\ship.png" />
+    <Image Include="Resources\laser.png" />
+    <Image Include="Resources\meteor.png" />
   </ItemGroup>
 </Project>
