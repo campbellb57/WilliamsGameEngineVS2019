@@ -6,6 +6,7 @@ Laser::Laser(sf::Vector2f pos)
 {
 	sprite_.setTexture(GAME.getTexture("Resources/Laser.png"));
 	sprite_.setPosition(pos);
+	sprite_.setScale(sf::Vector2f(0.05, 0.05));
 	assignTag("Laser");
 }
 
@@ -27,4 +28,9 @@ void Laser::update(sf::Time& elapsed)
 	{
 		sprite_.setPosition(sf::Vector2f(pos.x + SPEED * msElapsed, pos.y));
 	}
+}
+
+sf::FloatRect Laser::getCollisionRect()
+{
+	return sprite_.getGlobalBounds();
 }

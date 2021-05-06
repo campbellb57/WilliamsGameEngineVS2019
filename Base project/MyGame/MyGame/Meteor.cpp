@@ -6,7 +6,7 @@ Meteor::Meteor(sf::Vector2f pos)
 {
 	sprite_.setTexture(GAME.getTexture("Resources/meteor.png"));
 	sprite_.setPosition(pos);
-	sprite_.setScale(sf::Vector2f(0.05, 0.05 ));
+	sprite_.setScale(sf::Vector2f(0.2, 0.2 ));
 	assignTag("meteor");
 }
 
@@ -28,4 +28,19 @@ void Meteor::update(sf::Time& elapsed)
 	{
 		sprite_.setPosition(sf::Vector2f(pos.x - SPEED * msElapsed, pos.y));
 	}
+}
+
+sf::FloatRect Meteor::getCollisionRect()
+{
+	return sprite_.getGlobalBounds();
+}
+
+void Meteor::handleCollision(GameObject& otherGameObject)
+{
+	if (otherGameObject.hasTag("laser"))
+	{
+		otherGameObject.makeDead();
+	}
+
+	makeDead();
 }
