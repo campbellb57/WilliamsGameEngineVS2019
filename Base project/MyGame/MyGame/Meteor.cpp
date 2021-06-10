@@ -8,7 +8,8 @@ Meteor::Meteor(sf::Vector2f pos)
 {
 	sprite_.setTexture(GAME.getTexture("Resources/meteor.png"));
 	sprite_.setPosition(pos);
-	sprite_.setScale(sf::Vector2f(0.15, 0.15 ));
+	sprite_.setScale(sf::Vector2f(0.24, 0.24));
+	sprite_.setRotation(12);
 	assignTag("meteor");
 	setCollisionCheckEnabled(true);
 }
@@ -26,7 +27,7 @@ void Meteor::update(sf::Time& elapsed)
 	if (pos.x < sprite_.getGlobalBounds().width * -1)
 	{
 		GameScene& scene = (GameScene&)GAME.getCurrentScene();
-		//scene.decreaseLives();
+		scene.increaseScore();
 		makeDead();
 	}
 	else

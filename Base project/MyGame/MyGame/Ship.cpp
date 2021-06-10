@@ -41,7 +41,7 @@ Ship::Ship()
 {
 	sprite_.setTexture(GAME.getTexture("Resources/ship.png"));
 	sprite_.setPosition(sf::Vector2f(100, 100));
-	sprite_.setScale(sf::Vector2f(0.3, 0.3));
+	sprite_.setScale(sf::Vector2f(0.15, 0.15));
 	assignTag("Ship");
 	setCollisionCheckEnabled(true);
 }
