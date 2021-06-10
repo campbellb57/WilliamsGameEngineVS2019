@@ -7,6 +7,7 @@ Laser::Laser(sf::Vector2f pos)
 	sprite_.setTexture(GAME.getTexture("Resources/Laser.png"));
 	sprite_.setPosition(pos);
 	sprite_.setScale(sf::Vector2f(0.05, 0.05));
+	sprite_.setRotation(-55);
 	assignTag("Laser");
 }
 

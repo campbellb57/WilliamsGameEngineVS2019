@@ -7,6 +7,8 @@ class Ship : public GameObject
 public:
 	Ship();
 	void draw();
+	sf::FloatRect getCollisionRect();
+	void handleCollision(GameObject& otherGameObject);
 	void update(sf::Time& elapsed);
 private:
 	sf::Sprite sprite_;

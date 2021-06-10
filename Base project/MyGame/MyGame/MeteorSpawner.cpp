@@ -14,7 +14,7 @@ void MeteorSpawner::update(sf::Time& elapsed)
 		sf::Vector2u size = GAME.getRenderWindow().getSize();
 
 		float meteorx = (float)(size.x + 100);
-		float meteory = (float)(rand() % size.y);
+		float meteory = (float)((rand() % size.y - 100) + 50);
 
 		MeteorPtr meteor = std::make_shared<Meteor>(sf::Vector2f(meteorx, meteory));
 		GAME.getCurrentScene().addGameObject(meteor);

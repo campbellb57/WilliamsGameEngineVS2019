@@ -19,6 +19,10 @@
     <ClCompile Include="Laser.cpp" />
     <ClCompile Include="Meteor.cpp" />
     <ClCompile Include="MeteorSpawner.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="GameOverMessage.cpp" />
+    <ClCompile Include="GameOverScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\AnimatedSprite.h">
@@ -41,6 +45,10 @@
     <ClInclude Include="Laser.h" />
     <ClInclude Include="Meteor.h" />
     <ClInclude Include="MeteorSpawner.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="GameOverMessage.h" />
+    <ClInclude Include="GameOverScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -59,5 +67,9 @@
     <Image Include="..\..\..\..\..\..\OneDrive\Game engine\ship.png" />
     <Image Include="Resources\laser.png" />
     <Image Include="Resources\meteor.png" />
+    <Image Include="Resources\explosion-spritesheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\boom.wav" />
   </ItemGroup>
 </Project>
